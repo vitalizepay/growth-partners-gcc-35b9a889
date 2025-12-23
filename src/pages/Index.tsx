@@ -1,14 +1,19 @@
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Leadership from "@/components/Leadership";
 import Services from "@/components/Services";
 import Process from "@/components/Process";
+import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const Index = () => {
+  useScrollAnimation();
+
   return (
     <>
       <Helmet>
@@ -28,6 +33,7 @@ const Index = () => {
         <Leadership />
         <Services />
         <Process />
+        <Testimonials />
         <Contact />
         <Footer />
       </main>
